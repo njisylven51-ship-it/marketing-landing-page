@@ -60,34 +60,37 @@ export default function Testimonials() {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl w-full grid md:grid-cols-2 gap-10">
+      <div className="relative z-10 max-w-400 w-full grid md:grid-cols-2 gap-7">
         {/* LEFT: TEXT */}
-        <div className="flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight drop-shadow-[0_0_10px_#00ffff40]">
+        <div className="flex flex-col justify-center  gap-3">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold mb-4 leading-tight drop-shadow-[0_0_10px_#00ffff40]">
             DISCOVER THE BEST TECH
           </h1>
 
-          <p className="text-cyan-200 mb-6 max-w-md">
+          <p className="text-cyan-200 mb-6 max-w-lg lg:text-lg">
             Browse, compare, and connect with top tech products and vendors all in one place. Find exactly what you need with ease and confidence.
           </p>
 
-          <button className="bg-cyan-500 hover:bg-cyan-400 transition px-6 py-3 rounded-xl font-semibold w-fit text-black shadow-[0_0_12px_#00eaff]">
-            Explore Now
+          <button className="bg-cyan-500 hover:bg-cyan-400 transition px-18 py-6  rounded-xl font-bold w-fit text-black shadow-[0_0_12px_#00eaff]">
+            <span className="opacity-70 lg:text-1xl"> Explore Now </span>
           </button>
         </div>
         {/* RIGHT: SLIDER */}
-        <div className="relative">
+        <div className="
+          bg-[#0b1026] text-cyan-100 rounded-2xl p-6 w-full mx-auto shadow-[0_0_20px_#00ffff40] border border-cyan-400/20 md:max-w-md lg:max-w-lg lg:aspect-square
+        "
+        >
           <motion.div
             key={index}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
-            className="bg-[#0b1026] text-cyan-100 rounded-2xl p-6 w-full max-w-md mx-auto shadow-[0_0_20px_#00ffff40] border border-cyan-400/20"
+            className="bg-[#0b1026] text-cyan-100 rounded-2xl p-6 w-full max-w-full mx-auto"
           >
             <img
               src={testimonials[index].img} 
               alt={testimonials[index].name}
-              className="w-full h-60 object-cover rounded-xl mb-4 shadow-[0_0_10px_#00eaff50]"
+              className="w-full h-70 object-cover rounded-xl mb-4 shadow-[0_0_10px_#00eaff50]"
             />
 
             <div className="flex gap-2 items-start mb-3">

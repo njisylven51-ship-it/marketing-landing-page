@@ -10,7 +10,7 @@ import Pricing from "../components/pricing";
 const Router_page = () => {
   return (
     <div>
-            <Routes>
+      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/call_to_action' element={<Call_to_action/>}/>
       <Route path='/about' element={<About/>}/>
