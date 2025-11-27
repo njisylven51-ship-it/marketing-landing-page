@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { HiMenu } from "react-icons/hi"
 import { useState } from "react"
+import logo from "../../assets/logo.png"
 
 const NAvbar = () => {
   const [open, setOpen] = useState(false)
@@ -63,6 +64,8 @@ const NAvbar = () => {
           {["/", "/contact", "/about", "/pricing", "/testimonials"].map((path, i) => {
             const labels = ["Home", "Contact", "About", "Pricing", "Testimonials"]
             return (
+              <>
+              
               <NavLink
                 key={path}
                 to={path}
@@ -76,11 +79,13 @@ const NAvbar = () => {
               >
                 {labels[i]}
               </NavLink>
+              </>
             )
           })}
         </ul>
       </div>
     </nav>
+    
   )
 }
 
